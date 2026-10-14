@@ -26,3 +26,38 @@
   .gallery{gap:10px}
   .gallery img{height:165px}
 }
+
+/* 2026-10-15 mobile fixes: typography unchanged */
+@media(max-width:760px){
+  /* Remove the gold divider directly below the reception date on mobile. */
+  .bigdate{border-bottom:none}
+
+  /* Prevent OUR FAMILY text from inheriting the desktop two-column width. */
+  .family{
+    grid-template-columns:1fr;
+    width:100%;
+    max-width:100%;
+    gap:25px;
+    margin:35px auto 0;
+    text-align:center;
+  }
+  .family>div{
+    width:100%;
+    min-width:0;
+    max-width:100%;
+    padding:0 8px;
+  }
+  .family h3,
+  .family p{
+    max-width:100%;
+    white-space:normal;
+    overflow-wrap:normal;
+    word-break:normal;
+  }
+  .family img{
+    display:block;
+    width:min(100%,310px);
+    height:230px;
+    margin:0 auto;
+  }
+}
